@@ -36,7 +36,7 @@ function doReload() {
 
 window.addEventListener('load',function (){
 
-    setTimeout(doReload, 1000000);
+    setTimeout(doReload, 100000);
 })
 
 window.addEventListener('load',function (){
