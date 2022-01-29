@@ -1,17 +1,32 @@
 'use strict'
+    let today;
+    let todayYear;
+    let todayMonth;
+    let todayDate;
+    let todayHours; 
+    let todayMinutes;
+    let todaySeconds;
+    let text;
+    let MinutesTextChange;
+
+function getNowDate(){
+    today = new Date();
+    todayYear = today.getFullYear();
+    todayMonth = today.getMonth()+1;
+    todayDate = today.getDate();
+    todayHours = today.getHours(); 
+    todayMinutes = today.getMinutes();
+    todaySeconds = today.getSeconds();
+    text;
+    MinutesTextChange;
+
+}
+setInterval('getNowDate();', 1000);
 
 function clock(){
 
     //表示用
-    let today = new Date();
-    let todayYear = today.getFullYear();
-    let todayMonth = today.getMonth()+1;
-    let todayDate = today.getDate();
-    let todayHours = today.getHours(); 
-    let todayMinutes = today.getMinutes();
-    let todaySeconds = today.getSeconds();
-    let text;
-    let MinutesTextChange;
+
 
     function timer(){
         document.getElementById('daysId').innerHTML = '<p>'+todayYear+'年'+'&nbsp;'+todayMonth+'月'+todayDate+'日'+'</p>';
@@ -24,15 +39,7 @@ function clock(){
 setInterval('clock();', 1000);
 
 //喋る用
-let today = new Date();
-let todayYear = today.getFullYear();
-let todayMonth = today.getMonth()+1;
-let todayDate = today.getDate();
-let todayHours = today.getHours(); 
-let todayMinutes = today.getMinutes();
-let todaySeconds = today.getSeconds();
-let text;
-let MinutesTextChange;
+
 
 function textChangeHello(){
     if(todayMinutes==10 || todayMinutes==20 || todayMinutes==30 || todayMinutes==40 || todayMinutes==50 ){
@@ -50,6 +57,15 @@ function textChangeHello(){
 }
 
 function speak(){
+    // let today = new Date();
+    // let todayYear = today.getFullYear();
+    // let todayMonth = today.getMonth()+1;
+    // let todayDate = today.getDate();
+    // let todayHours = today.getHours(); 
+    // let todayMinutes = today.getMinutes();
+    // let todaySeconds = today.getSeconds();
+    // let text;
+    // let MinutesTextChange;
     textChangeHello();
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
 }
@@ -67,4 +83,4 @@ function speak(){
 // window.addEventListener('load',function (){
 //     speak();
 // });
-      
+
