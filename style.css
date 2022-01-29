@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.button 
+{
+    position: relative;
+    left: 800px;
+    top: 230px;  
+    height: 100px;
+    width: 120px;
+
+}
+
+#timer 
+{
+    margin-left: 70px;
+    border: 1px solid black;
+}
+
+.timer
+{
+    font-size: 70px;
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    display: inline;
+}
+
+#timesId{
+    position:relative;
+    left: 250px;
+}
