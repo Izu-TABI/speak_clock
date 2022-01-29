@@ -1,5 +1,29 @@
 'use strict'
 
+function clock(){
+
+    //表示用
+    let today = new Date();
+    let todayYear = today.getFullYear();
+    let todayMonth = today.getMonth()+1;
+    let todayDate = today.getDate();
+    let todayHours = today.getHours(); 
+    let todayMinutes = today.getMinutes();
+    let todaySeconds = today.getSeconds();
+    let text;
+    let MinutesTextChange;
+
+    function timer(){
+        document.getElementById('daysId').innerHTML = '<p>'+todayYear+'年'+'&nbsp;'+todayMonth+'月'+todayDate+'日'+'</p>';
+        document.getElementById('timesId').innerHTML = '<p>'+todayHours+':'+todayMinutes+'&nbsp;'+todaySeconds+'</p>';
+
+    }
+    timer();
+
+}
+setInterval('clock();', 1000);
+
+//喋る用
 let today = new Date();
 let todayYear = today.getFullYear();
 let todayMonth = today.getMonth()+1;
@@ -12,16 +36,16 @@ let MinutesTextChange;
 
 function textChangeHello(){
     if(todayMinutes==10 || todayMinutes==20 || todayMinutes==30 || todayMinutes==40 || todayMinutes==50 ){
-       MinutesTextChange = 'じゅっぷんです'
+    MinutesTextChange = '、っぷん、'
     } else {
-        MinutesTextChange = 'ふんです'
+        MinutesTextChange = 'ふん、'
     } 
     if(todayHours < 12){
-        text = 'おはようございます、旅人さん。'+'現在時刻は、'+todayHours+todayHours+'時、'+todayMinutes+MinutesTextChange;
+        text = 'おはようございます、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     } else if(todayHours >= 12 && todayHours < 18) {
-        text = 'こんにちは、旅人さん。'+'現在時刻は、'+todayHours+todayHours+'時、'+todayMinutes+MinutesTextChange;
+        text = 'こんにちは、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     } else {
-        text = 'こんばんは、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange;
+        text = 'こんばんは、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     }
 }
 
@@ -30,15 +54,17 @@ function speak(){
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
 }
 
-function doReload() {
-    window.location.reload();
-}
 
-window.addEventListener('load',function (){
 
-    setTimeout(doReload, 100000);
-})
+// function doReload() {
+//     window.location.reload();
+// }
 
-window.addEventListener('load',function (){
-    speak();
-});                       
+// window.addEventListener('load',function (){
+//     setTimeout(doReload, 3600000);//10分おきに通知
+// })
+
+// window.addEventListener('load',function (){
+//     speak();
+// });
+      
