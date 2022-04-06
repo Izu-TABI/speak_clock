@@ -57,30 +57,6 @@ function textChangeHello(){
 }
 
 function speak(){
-    // let today = new Date();
-    // let todayYear = today.getFullYear();
-    // let todayMonth = today.getMonth()+1;
-    // let todayDate = today.getDate();
-    // let todayHours = today.getHours(); 
-    // let todayMinutes = today.getMinutes();
-    // let todaySeconds = today.getSeconds();
-    // let text;
-    // let MinutesTextChange;
     textChangeHello();
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
 }
-
-
-
-// function doReload() {
-//     window.location.reload();
-// }
-
-// window.addEventListener('load',function (){
-//     setTimeout(doReload, 3600000);//10分おきに通知
-// })
-
-// window.addEventListener('load',function (){
-//     speak();
-// });
-
