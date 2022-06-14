@@ -48,11 +48,11 @@ function textChangeHello(){
         MinutesTextChange = 'ふん、'
     } 
     if(todayHours < 12){
-        text = 'おはようございます、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
+        text = 'おはようございます。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     } else if(todayHours >= 12 && todayHours < 18) {
-        text = 'こんにちは、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
+        text = 'こんにちは。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     } else {
-        text = 'こんばんは、旅人さん。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
+        text = 'こんばんは。'+'現在時刻は、'+todayHours+'時、'+todayMinutes+MinutesTextChange+todaySeconds+'秒です';
     }
 }
 
