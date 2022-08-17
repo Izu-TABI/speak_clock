@@ -2,29 +2,13 @@
 
 .button 
 {
-    position: relative;
-    left: 800px;
-    top: 230px;  
+    width: 200px;
     height: 100px;
-    width: 120px;
-
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #timer 
 {
-    margin-left: 70px;
-    border: 1px solid black;
-}
-
-.timer
-{
-    font-size: 70px;
-    font-family: 'Nunito', sans-serif;
-    position: absolute;
-    display: inline;
-}
-
-#timesId{
-    position:relative;
-    left: 250px;
+    font-size: 50px;
 }
